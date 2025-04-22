@@ -1,0 +1,3 @@
+# Parameters for the random trajectories
+mode: "random"
+v_list: [4.0]       

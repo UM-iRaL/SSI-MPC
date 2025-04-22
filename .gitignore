@@ -1,0 +1,14 @@
+venv/*
+data/
+results/
+.idea/
+.vscode
+*.pyc
+acados_models/
+c_generated_code/
+*.egg-info/
+dist/
+build/
+ros_mpc/benchmark/.DS_Store
+ros_mpc/.DS_Store
+.DS_Store

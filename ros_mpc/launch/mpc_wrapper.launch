@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- true if running the nodes in the gazebo simulator environment. false if running on the real platform-->
+    <arg name="environment" default="gazabo"/>
+
+    <!-- Recording parameters -->
+    <arg name="recording" default="false"/>
+    <arg name="overwrite" default="true"/>
+
+    <!-- Reference trajectory parameters -->
+    <arg name="n_seeds" default="1"/> <!-- How many random seeds to use to generate trajectories -->
+    <arg name="plot" default="false"/>
+
+    <!-- Stable version: Use time horizon of 1 second, 10 control nodes and control @ 50 Hz (control_freq_factor=5) -->
+    <arg name="t_horizon" default="1"/>
+    <arg name="n_nodes" default="10"/>
+
+    <!-- Trajectory tracking experiment reset -->
+    <arg name="reset_experiment" default="true"/>
+
+    <!-- Random feature -->
+    <arg name="n_rf" default="50"/><!-- tested: 50, 100 --><!-- use 0 for nominal MPC-->
+    <arg name="lr" default="0.25"/>
+    <arg name="heuristic" default="False"/>
+    <arg name="kernel" default="Gaussian"/>
+    <arg name="kernel_std" default="0.01"/>
+
+    <!-- MPC -->
+    <node pkg="ros_mpc" type="mpc_node.py" name="mpc_wrapper" output="screen">
+        <rosparam file="$(find ros_mpc)/config/simulation_run.yaml"/>
+
+        <param name="recording" value="$(arg recording)"/>
+        <param name="overwrite" value="$(arg overwrite)"/>
+
+        <param name="plot" value="$(arg plot)"/>
+        <param name="t_horizon" value="$(arg t_horizon)"/>
+        <param name="n_nodes" value="$(arg n_nodes)"/>
+
+        <param name="reset_experiment" value="$(arg reset_experiment)"/>
+
+        <param name="n_rf" value="$(arg n_rf)"/>
+        <param name="lr" value="$(arg lr)"/>
+        <param name="heuristic" value="$(arg heuristic)"/>
+        <param name="kernel" value="$(arg kernel)"/>
+        <param name="kernel_std" value="$(arg kernel_std)"/>
+    </node>
+
+    <!-- Trajectory generator -->
+    <node pkg="ros_mpc" type="reference_publisher_node.py" name="ref_gen" output="screen">
+        <rosparam file="$(find ros_mpc)/config/simulation_run.yaml"/>
+
+        <rosparam file="$(find ros_mpc)/config/traj_circle.yaml"/>
+        <!-- <rosparam file="$(find ros_mpc)/config/traj_tilted_circle.yaml"/> -->
+        <!-- <rosparam file="$(find ros_mpc)/config/traj_wraped_circle.yaml"/> -->
+        <!-- <rosparam file="$(find ros_mpc)/config/traj_lemniscate.yaml"/> -->
+        <!-- <rosparam file="$(find ros_mpc)/config/traj_wraped_lemniscate.yaml"/> -->
+        <!-- <rosparam file="$(find ros_mpc)/config/traj_random.yaml"/> -->
+
+        <param name="n_seeds" value="$(arg n_seeds)"/>
+
+        <param name="t_horizon" value="$(arg t_horizon)"/>
+        <param name="n_nodes" value="$(arg n_nodes)"/>
+
+        <param name="plot" value="$(arg plot)"/>
+    </node>
+
+
+</launch>

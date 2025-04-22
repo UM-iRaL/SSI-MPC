@@ -1,0 +1,20 @@
+# Parameters for the wraped lemniscate trajectories at successively increasing speed
+# Change in height: 3m 
+mode: "wraped_lemniscate"
+loop_z: 3.0            # Z position of loop plane [m]
+loop_r: 7.5            # Radius of lemniscate [m]
+loop_v_max: 10.0       # Maximum speed achieved (approx.) [m/s]
+loop_lin_a: 0.25       # Linear acceleration and deceleration of trajectory [m/s^2]
+loop_clockwise: False  # Rotation direction of the quad
+loop_yawing: False     # Yaw quadrotor along the circle (only for loop)
+
+
+# # Parameters for the wraped lemniscate trajectories at successively increasing speed
+# # Change in height: 1m 
+# mode: "wraped_lemniscate"
+# loop_z: 2.5            # Z position of loop plane [m]
+# loop_r: 7.5            # Radius of lemniscate [m]
+# loop_v_max: 10.0       # Maximum speed achieved (approx.) [m/s]
+# loop_lin_a: 0.25       # Linear acceleration and deceleration of trajectory [m/s^2]
+# loop_clockwise: False  # Rotation direction of the quad
+# loop_yawing: False     # Yaw quadrotor along the circle (only for loop)
