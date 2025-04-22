@@ -1,6 +1,6 @@
 # Simultaneous System Identification and Model Predictive Control with No Dynamic Regret
 
-This repo contains the code associated to our paper Simultaneous System Identification and Model Predictive Control with No Dynamic Regret. In the paper, we propose the algorithm SSI-MPC, for simultaneous model learning of unknown dyanmics/disturbance in a self-supervised manner using only the data collected on-the-go (i.e., without offline training), and model predictive control. 
+This repo contains the code associated to our paper [Simultaneous System Identification and Model Predictive Control with No Dynamic Regret](https://arxiv.org/abs/2407.04143). In the paper, we propose the algorithm SSI-MPC, for simultaneous model learning of unknown dyanmics/disturbance in a self-supervised manner using only the data collected on-the-go (i.e., without offline training), and model predictive control. 
 
 We demonstrate the algorithm in reference trajectory tracking of a quadrotor in sumulation under drag effects, and in real-world under wind and ground effects.
 
