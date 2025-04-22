@@ -10,8 +10,7 @@ We demonstrate the algorithm in reference trajectory tracking of a quadrotor in 
 
 If you use this code in an academic context, please cite the following publication:
 
-Paper: [Simultaneous System Identification and Model Predictive Control with No Dynamic Regret](https://arxiv.org/abs/2407.04143)
-
+[Simultaneous System Identification and Model Predictive Control with No Dynamic Regret](https://arxiv.org/abs/2407.04143)
 
 ```
 @article{zhou2024simultaneous,
@@ -66,7 +65,7 @@ The code that runs on [RotorS](https://github.com/ethz-asl/rotors_simulator) bui
 1. Clone this repository into your catkin workspace where you build rpg_quadrotor_control:
    ```
    cd <CATKIN_WS_DIR>/src
-   git clone https://github.com/Hongyu-ZHOU/SSI-MPC.git
+   git clone git@github.com:UM-iRaL/SSI-MPC.git
    ```
    
 2. Install the rest of required Python libraries:
