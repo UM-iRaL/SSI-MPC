@@ -4,7 +4,7 @@ This repo contains the code associated to our paper [Simultaneous System Identif
 
 We demonstrate the algorithm in reference trajectory tracking of a quadrotor in sumulation under drag effects, and in real-world under wind and ground effects.
 
-![image](https://github.com/Hongyu-ZHOU/SSI-MPC/blob/main/img/Hardware.png)
+![image](https://github.com/UM-iRaL/SSI-MPC/blob/main/img/Hardware.png)
 
 ### Citing
 
