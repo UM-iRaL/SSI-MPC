@@ -70,7 +70,7 @@ The code that runs on [RotorS](https://github.com/ethz-asl/rotors_simulator) bui
    
 2. Install the rest of required Python libraries:
    ```
-   cd SSI_MPC
+   cd SSI-MPC
    python setup.py install
    ```
  
@@ -102,7 +102,7 @@ source <PATH_TO_VENV_DIRECTORY>/mpc_venv/bin/activate
 
 Then, make sure to add to your Python path the main directory of this package:
 ```
-export PYTHONPATH=$PYTHONPATH:<CATKIN_WS_DIR>/src/SSI_MPC/ros_mpc
+export PYTHONPATH=$PYTHONPATH:<CATKIN_WS_DIR>/src/SSI-MPC/ros_mpc
 ```
 
 Also, source the environment:
